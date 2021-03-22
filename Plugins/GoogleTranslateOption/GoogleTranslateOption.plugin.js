@@ -1,21 +1,17 @@
 /**
- * @name GoogleTranslateOption
+ * @name GoogleTranslateOptionRot13
  * @author DevilBro
- * @authorId 278543574059057154
+ * @authorId 468172257378828292
  * @version 2.1.8
  * @description Allows you to translate Messages and your outgoing Message within Discord
- * @invite Jx3TjNS
- * @donate https://www.paypal.me/MircoWittrien
- * @patreon https://www.patreon.com/MircoWittrien
- * @website https://mwittrien.github.io/
- * @source https://github.com/mwittrien/BetterDiscordAddons/tree/master/Plugins/GoogleTranslateOption/
- * @updateUrl https://mwittrien.github.io/BetterDiscordAddons/Plugins/GoogleTranslateOption/GoogleTranslateOption.plugin.js
+ * @source https://github.com/MeowMC/BetterDiscordAddons/blob/master/Plugins/GoogleTranslateOption/
+ * @updateUrl https://github.com/MeowMC/BetterDiscordAddons/blob/master/Plugins/GoogleTranslateOption/GoogleTranslateOption.plugin.js
  */
 
 module.exports = (_ => {
 	const config = {
 		"info": {
-			"name": "GoogleTranslateOption",
+			"name": "GoogleTranslateOptionRot13",
 			"author": "DevilBro",
 			"version": "2.1.8",
 			"description": "Allows you to translate Messages and your outgoing Message within Discord"
@@ -29,7 +25,7 @@ module.exports = (_ => {
 	};
 	
 	return !window.BDFDB_Global || (!window.BDFDB_Global.loaded && !window.BDFDB_Global.started) ? class {
-		getName () {return config.info.name;}
+		getName () {return "GoogleTranslateOptionRot13";}
 		getAuthor () {return config.info.author;}
 		getVersion () {return config.info.version;}
 		getDescription () {return `The Library Plugin needed for ${config.info.name} is missing. Open the Plugin Settings to download it. \n\n${config.info.description}`;}
@@ -212,7 +208,7 @@ module.exports = (_ => {
 			"0":"−−−−−", "1":"·−−−−", "2":"··−−−", "3":"···−−", "4":"····−", "5":"·····", "6":"−····", "7":"−−···", "8":"−−−··", "9":"−−−−·", "!":"−·−·−−", "\"":"·−··−·", "$":"···−··−", "&":"·−···", "'":"·−−−−·", "(":"−·−−·", ")":"−·−−·−", "+":"·−·−·", ",":"−−··−−", "-":"−····−", ".":"·−·−·−", "/":"−··−·", ":":"−−−···", ";":"−·−·−·", "=":"−···−", "?":"··−−··", "@":"·−−·−·", "a":"·−", "b":"−···", "c":"−·−·", "d":"−··", "e":"·", "f":"··−·", "g":"−−·", "h":"····", "i":"··", "j":"·−−−", "k":"−·−", "l":"·−··", "m":"−−", "n":"−·", "o":"−−−", "p":"·−−·", "q":"−−·−", "r":"·−·", "s":"···", "t":"−", "u":"··−", "v":"···−", "w":"·−−", "x":"−··−", "y":"−·−−", "z":"−−··", "·":"e", "··":"i", "···":"s", "····":"h", "·····":"5", "····−":"4", "···−":"v", "···−··−":"$", "···−−":"3", "··−":"u", "··−·":"f", "··−−··":"?", "··−−·−":"_", "··−−−":"2", "·−":"a", "·−·":"r", "·−··":"l", "·−···":"&", "·−··−·":"\"", "·−·−·":"+", "·−·−·−":".", "·−−":"w", "·−−·":"p", "·−−·−·":"@", "·−−−":"j", "·−−−−":"1", "·−−−−·":"'", "−":"t", "−·":"n", "−··":"d", "−···":"b", "−····":"6", "−····−":"-", "−···−":"=", "−··−":"x", "−··−·":"/", "−·−":"k", "−·−·":"c", "−·−·−·":";", "−·−·−−":"!", "−·−−":"y", "−·−−·":"(", "−·−−·−":")", "−−":"m", "−−·":"g", "−−··":"z", "−−···":"7", "−−··−−":",", "−−·−":"q", "−−−":"o", "−−−··":"8", "−−−···":":", "−−−−·":"9", "−−−−−":"0", "_":"··−−·−"
 		};
 		
-		const googleLanguages = ["af","am","ar","az","be","bg","bn","bs","ca","ceb","co","cs","cy","da","de","el","en","eo","es","et","eu","fa","fi","fr","fy","ga","gd","gl","gu","ha","haw","hi","hmn","hr","ht","hu","hy","id","ig","is","it","iw","ja","jw","ka","kk","km","kn","ko","ku","ky","la","lb","lo","lt","lv","mg","mi","mk","ml","mn","mr","ms","mt","my","ne","nl","no","ny","or","pa","pl","ps","pt","ro","ru","rw","sd","si","sk","sl","sm","sn","so","sq","sr","st","su","sv","sw","ta","te","tg","th","tk","tl","tr","tt","ug","uk","ur","uz","vi","xh","yi","yo","zh-CN","zu"];
+		const googleLanguages = ["af","am","ar","az","be","bg","bn","bs","ca","ceb","co","cs","cy","da","de","el","en","eo","es","et","eu","fa","fi","fr","fy","ga","gd","gl","gu","ha","haw","hi","hmn","hr","ht","hu","hy","id","ig","is","it","iw","ja","jw","ka","kk","km","kn","ko","ku","ky","la","lb","lo","lt","lv","mg","mi","mk","ml","mn","mr","ms","mt","my","ne","nl","no","ny","or","pa","pl","ps","pt","ro","rot13","ru","rw","sd","si","sk","sl","sm","sn","so","sq","sr","st","su","sv","sw","ta","te","tg","th","tk","tl","tr","tt","ug","uk","ur","uz","vi","xh","yi","yo","zh-CN","zu"];
 		const translationEngines = {
 			googleapi: 					{name: "GoogleApi",			auto: true,	funcName: "googleApiTranslate",			languages: googleLanguages},
 			google: 					{name: "Google",			auto: true,	funcName: "googleTranslate",			languages: googleLanguages},
@@ -223,7 +219,7 @@ module.exports = (_ => {
 		
 		var favorites, languages, translationEnabled, isTranslating, translatedMessages, oldMessages;
 	
-		return class GoogleTranslateOption extends Plugin {
+		return class GoogleTranslateOptionRot13 extends Plugin {
 			onLoad () {
 				_this = this;
 				
@@ -610,6 +606,10 @@ module.exports = (_ => {
 						morse: {
 							name: "Morse",
 							id: "morse"
+						},
+						rot13: {
+							name: "Rot13",
+							id: "rot13"
 						}
 					}
 				);
@@ -692,11 +692,12 @@ module.exports = (_ => {
 							case "morse": newText = this.morse2string(newText); break;
 						}
 					}
-					if (output.id == "binary" || output.id == "braille" || output.id == "morse") {
+					if (output.id == "binary" || output.id == "braille" || output.id == "morse" || output.id == "rot13") {
 						switch (output.id) {
 							case "binary": newText = this.string2binary(newText); break;
 							case "braille": newText = this.string2braille(newText); break;
 							case "morse": newText = this.string2morse(newText); break;
+							case "rot13": newText = this.string2rot13(newText); break;
 						}
 						finishTranslation(newText);
 					}
@@ -936,6 +937,14 @@ module.exports = (_ => {
 				return string;
 			}
 
+			string2rot13 (string) {
+				const rot13 = str => str.split('')
+					.map(char => String.fromCharCode(char.charCodeAt(0) + (char.toLowerCase() < 'n' ? 13 : -13)))
+					.join('');
+
+				return rot13(string);
+			}
+
 			braille2string (braille) {
 				let string = "";
 				for (let character of braille) string += brailleConverter[character.toLowerCase()] ? brailleConverter[character.toLowerCase()] : character;
@@ -949,6 +958,12 @@ module.exports = (_ => {
 					string += " ";
 				}
 				return string.trim();
+			}
+
+			rot132string (rot13) {
+				let string = "";
+				rot13 = this.string2rot13(string)
+				return rot13;
 			}
 
 			addExceptions (string, excepts) {
