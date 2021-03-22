@@ -1,5 +1,5 @@
 /**
- * @name GoogleTranslateOptionRot13
+ * @name GoogleTranslateOption
  * @author DevilBro
  * @authorId 468172257378828292
  * @version 2.1.8
@@ -11,7 +11,7 @@
 module.exports = (_ => {
 	const config = {
 		"info": {
-			"name": "GoogleTranslateOptionRot13",
+			"name": "GoogleTranslateOption",
 			"author": "DevilBro",
 			"version": "2.1.8",
 			"description": "Allows you to translate Messages and your outgoing Message within Discord"
@@ -25,7 +25,7 @@ module.exports = (_ => {
 	};
 	
 	return !window.BDFDB_Global || (!window.BDFDB_Global.loaded && !window.BDFDB_Global.started) ? class {
-		getName () {return "GoogleTranslateOptionRot13";}
+		getName () {return "GoogleTranslateOption";}
 		getAuthor () {return config.info.author;}
 		getVersion () {return config.info.version;}
 		getDescription () {return `The Library Plugin needed for ${config.info.name} is missing. Open the Plugin Settings to download it. \n\n${config.info.description}`;}
@@ -219,7 +219,7 @@ module.exports = (_ => {
 		
 		var favorites, languages, translationEnabled, isTranslating, translatedMessages, oldMessages;
 	
-		return class GoogleTranslateOptionRot13 extends Plugin {
+		return class GoogleTranslateOption extends Plugin {
 			onLoad () {
 				_this = this;
 				
