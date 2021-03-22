@@ -2,7 +2,7 @@
  * @name GoogleTranslateOption
  * @author Minecraft Player
  * @authorId 468172257378828292
- * @version 2.1.8
+ * @version 2.1.9
  * @description Allows you to translate Messages and your outgoing Message within Discord
  * @source https://github.com/MeowMC/BetterDiscordAddons/blob/master/Plugins/GoogleTranslateOption/
  * @updateUrl https://github.com/MeowMC/BetterDiscordAddons/blob/master/Plugins/GoogleTranslateOption/GoogleTranslateOption.plugin.js
@@ -13,13 +13,12 @@ module.exports = (_ => {
 		"info": {
 			"name": "GoogleTranslateOption",
 			"author": "Minecraft Player",
-			"version": "2.1.8",
+			"version": "2.1.9",
 			"description": "Allows you to translate Messages and your outgoing Message within Discord"
 		},
 		"changeLog": {
 			"fixed": {
-				"Animated Emojis": "Fixed Translation Issue",
-				"Select Component": "Changed Stuff to improve Behaviour with the new Select Component"
+				"Stuff": "stuff"
 			}
 		}
 	};
