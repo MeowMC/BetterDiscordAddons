@@ -24,9 +24,8 @@ module.exports = (_ => {
 	};
 	
 	return !window.BDFDB_Global || (!window.BDFDB_Global.loaded && !window.BDFDB_Global.started) ? class {
-		getName () {return "GoogleTranslateOption";}
+		getName () {return config.info.name;}
 		getAuthor () {return config.info.author;}
-		getVersion () {return config.info.version;}
 		getVersion () {return config.info.version;}
 		getDescription () {return `The Library Plugin needed for ${config.info.name} is missing. Open the Plugin Settings to download it. \n\n${config.info.description}`;}
 		
