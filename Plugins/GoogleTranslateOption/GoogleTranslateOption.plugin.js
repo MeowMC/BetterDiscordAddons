@@ -12,7 +12,7 @@ module.exports = (_ => {
 	const config = {
 		"info": {
 			"name": "GoogleTranslateOption",
-			"author": "DevilBro",
+			"author": "Minecraft Player",
 			"version": "2.1.8",
 			"description": "Allows you to translate Messages and your outgoing Message within Discord"
 		},
@@ -27,6 +27,7 @@ module.exports = (_ => {
 	return !window.BDFDB_Global || (!window.BDFDB_Global.loaded && !window.BDFDB_Global.started) ? class {
 		getName () {return "GoogleTranslateOption";}
 		getAuthor () {return config.info.author;}
+		getVersion () {return config.info.version;}
 		getVersion () {return config.info.version;}
 		getDescription () {return `The Library Plugin needed for ${config.info.name} is missing. Open the Plugin Settings to download it. \n\n${config.info.description}`;}
 		
