@@ -1,6 +1,6 @@
 /**
  * @name GoogleTranslateOption
- * @author DevilBro
+ * @author Minecraft Player
  * @authorId 468172257378828292
  * @version 2.1.8
  * @description Allows you to translate Messages and your outgoing Message within Discord
